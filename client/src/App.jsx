@@ -10,11 +10,14 @@ import PostDetail from './pages/PostDetail';
 import Dashboard from './pages/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
 import CreatePost from './pages/CreatePost';
+import { SocketProvider } from './context/SocketContext';
+import Chat from './pages/Chat';
 
 function App() {
 
  return (
   <AuthProvider>
+    <SocketProvider>
     <Router>
       <Navbar />
       <Routes>
@@ -28,8 +31,10 @@ function App() {
         <Route path='/create-post' element={
           <PrivateRoute><CreatePost /></PrivateRoute>
         } />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </Router>
+    </SocketProvider>
   </AuthProvider>
  )
 };

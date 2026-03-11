@@ -344,3 +344,227 @@ button:disabled { background: #95a5a6; cursor: not-allowed; }
   .posts-grid { grid-template-columns: 1fr; }
   .dashboard-post-item { flex-direction: column; gap: 10px; }
 }
+
+
+
+
+/* Chat Page */
+.chat-page {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  height: calc(100vh - 130px);
+}
+
+.chat-container {
+  display: flex;
+  height: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Chat Sidebar */
+.chat-sidebar {
+  width: 220px;
+  background: #2c3e50;
+  padding: 20px;
+  color: white;
+}
+
+.chat-sidebar h3 {
+  color: #ecf0f1;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.online-users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.online-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.online-dot {
+  width: 8px;
+  height: 8px;
+  background: #2ecc71;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.you-badge {
+  color: #95a5a6;
+  font-size: 12px;
+}
+
+/* Chat Main */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h2 { color: #2c3e50; }
+.chat-header span { color: #27ae60; font-size: 14px; }
+
+/* Messages */
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.no-messages {
+  text-align: center;
+  color: #aaa;
+  margin-top: 50px;
+}
+
+.message { display: flex; }
+
+.own-message { justify-content: flex-end; }
+.other-message { justify-content: flex-start; }
+
+.message-bubble {
+  max-width: 65%;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+.own-message .message-bubble {
+  background: #3498db;
+  color: white;
+  border-bottom-right-radius: 3px;
+}
+
+.other-message .message-bubble {
+  background: #f0f2f5;
+  color: #333;
+  border-bottom-left-radius: 3px;
+}
+
+.message-sender {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.own-message .message-sender { color: #d6eaf8; }
+
+.message-bubble p { margin: 0; font-size: 15px; }
+
+.message-time {
+  font-size: 11px;
+  opacity: 0.7;
+  display: block;
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* Chat Input */
+.chat-input-area {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 15px;
+  outline: none;
+}
+
+.chat-input-area button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.chat-input-area button:hover { background: #2980b9; }
+
+/* Notifications */
+.notifications-wrapper { position: relative; }
+
+.notif-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.notif-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notifications-dropdown {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 280px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  z-index: 1000;
+  padding: 15px;
+}
+
+.notifications-dropdown h4 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.notif-item {
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.notif-item.join { background: #d5f5e3; color: #27ae60; }
+.notif-item.leave { background: #fdebd0; color: #e67e22; }
+.notif-item span { font-size: 11px; color: #aaa; display: block; margin-top: 3px; }
+
+.no-notif { color: #aaa; font-size: 13px; text-align: center; }

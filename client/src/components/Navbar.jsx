@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Notifications from './Notifications';
 
 const Navbar = () => {
     const {user, logout} = useAuth();
@@ -21,6 +22,8 @@ const Navbar = () => {
                 <>
                 <Link to="/dashboard">Dashboard</Link>
                 <Link to="/create-post">New Post</Link>
+                <Link to="/chat">💬 Chat</Link>
+                <Notifications />
                 <span className='nav-user'>Hello, {user.name}</span>
                 {user.role ==='admin' && (
                     <span className='admin-badge'>Admin</span>
