@@ -16,6 +16,8 @@ Level 1:
 Setup Development Environment Level 2:
 Frontend with a JavaScript Framework(React)
 Level 3: Building a full stack application with MERN
+Task 2: Websocket for real time communication
+Final Task: GraphQL API
 
 
 ## Author
